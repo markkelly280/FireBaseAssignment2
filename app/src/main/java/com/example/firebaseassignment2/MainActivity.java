@@ -12,9 +12,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        System.out.println("Error");
 
-        Log.e("Error", "Error at this point");
 
 
     }
