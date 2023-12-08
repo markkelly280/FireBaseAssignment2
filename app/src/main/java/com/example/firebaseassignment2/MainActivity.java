@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 new AuthUI.IdpConfig.GoogleBuilder().build(),
                 new AuthUI.IdpConfig.AnonymousBuilder().build());
 
-                ;
+
 
                 Intent signInIntent = AuthUI.getInstance()
                         .createSignInIntentBuilder()
