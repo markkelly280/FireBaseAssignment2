@@ -64,13 +64,6 @@ public class MainActivity extends AppCompatActivity {
         myRef.setValue("");
 
 
-
-
-
-
-
-
-
         SignOut = (Button) findViewById(R.id.signout_btn);
         SignOut.setOnClickListener(new View.OnClickListener() {
             @Override
