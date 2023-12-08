@@ -5,6 +5,7 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -55,11 +56,49 @@ public class MainActivity extends AppCompatActivity {
         myAuth = FirebaseAuth.getInstance();
         createSignInIntent();
 
+
+
         SignOut = (Button) findViewById(R.id.signout_btn);
         SignOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 signOut();
+            }
+        });
+
+//        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button solar = (Button) findViewById(R.id.solar_btn);
+//        solar.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent s = new Intent(MainActivity.this,);
+//                startActivity(s);
+//            }
+//        });
+
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button windfarms = (Button) findViewById(R.id.wind_btn);
+        windfarms.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent w = new Intent(MainActivity.this, wind.class);
+                startActivity(w);
+            }
+        });
+
+//        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button elecCar = (Button) findViewById(R.id.car_btn);
+//        elecCar.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent e = new Intent(MainActivity.this,);
+//                startActivity(e);
+//            }
+//        });
+
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button chargePoint = (Button) findViewById(R.id.charge_btn);
+        chargePoint.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent cP = new Intent(MainActivity.this, charge.class);
+                startActivity(cP);
             }
         });
     }
