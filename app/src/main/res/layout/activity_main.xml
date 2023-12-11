@@ -10,89 +10,63 @@
         android:id="@+id/signout_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="16dp"
         android:text="Sign Out"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="293dp"
+        tools:layout_editor_absoluteY="19dp" />
 
     <Button
         android:id="@+id/solar_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="13dp"
         android:text="Solar Panels"
-        app:layout_constraintBottom_toTopOf="@+id/wind_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="166dp" />
 
     <Button
         android:id="@+id/wind_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
         android:text="Wind Farms"
-        app:layout_constraintBottom_toTopOf="@+id/car_btn"
-        app:layout_constraintStart_toStartOf="@+id/solar_btn"
-        app:layout_constraintTop_toBottomOf="@+id/solar_btn" />
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="275dp" />
 
     <Button
         android:id="@+id/car_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:layout_marginBottom="15dp"
         android:text="Electric cars"
-        app:layout_constraintBottom_toTopOf="@+id/charge_btn"
-        app:layout_constraintStart_toStartOf="@+id/charge_btn"
-        app:layout_constraintTop_toBottomOf="@+id/wind_btn" />
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="344dp" />
 
     <Button
         android:id="@+id/charge_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="189dp"
         android:text="Charge Points"
-        app:layout_constraintBottom_toTopOf="@+id/exit_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/car_btn" />
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="406dp" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="46dp"
         android:text="Login"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="19dp" />
 
     <Button
         android:id="@+id/exit_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
         android:text="Exit"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/charge_btn" />
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="643dp" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="33dp"
-        android:layout_marginBottom="113dp"
-        app:layout_constraintBottom_toTopOf="@+id/solar_btn"
-        app:layout_constraintEnd_toStartOf="@+id/signout_btn"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img_20231208_150712" />
+        android:layout_width="110dp"
+        android:layout_height="85dp"
+        app:srcCompat="@drawable/img_20231208_150712"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="16dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
