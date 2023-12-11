@@ -21,7 +21,7 @@ import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.Firebase;
+//import com.google.firebase.Firebase;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -48,21 +48,15 @@ public class MainActivity extends AppCompatActivity {
                     OnSignInResult(result);
                 }
             }
-
     );
 
     @Override
-    protected  void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         myAuth = FirebaseAuth.getInstance();
         createSignInIntent();
-
-        FirebaseDatabase database = FirebaseDatabase.getInstance("");
-        DatabaseReference myRef = database.getReference("");
-        myRef.setValue("");
-
 
         SignOut = (Button) findViewById(R.id.signout_btn);
         SignOut.setOnClickListener(new View.OnClickListener() {
@@ -72,15 +66,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button solar = (Button) findViewById(R.id.solar_btn);
-//        solar.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent s = new Intent(MainActivity.this,);
-//                startActivity(s);
-//            }
-//        });
-
+        //Code to open the wind activity
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button windfarms = (Button) findViewById(R.id.wind_btn);
         windfarms.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,15 +76,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button elecCar = (Button) findViewById(R.id.car_btn);
-//        elecCar.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent e = new Intent(MainActivity.this,);
-//                startActivity(e);
-//            }
-//        });
-
+        //Code to open the charge points(?) Activity
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button chargePoint = (Button) findViewById(R.id.charge_btn);
         chargePoint.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,16 +93,13 @@ public class MainActivity extends AppCompatActivity {
                 new AuthUI.IdpConfig.GoogleBuilder().build(),
                 new AuthUI.IdpConfig.AnonymousBuilder().build());
 
-
-
-                Intent signInIntent = AuthUI.getInstance()
-                        .createSignInIntentBuilder()
-                        .setAvailableProviders(providers)
-                        .build();
+        Intent signInIntent = AuthUI.getInstance()
+                .createSignInIntentBuilder()
+                .setAvailableProviders(providers)
+                .build();
         signInLauncher.launch(signInIntent);
-
-
     }
+    //Firebase SignIn Result
     private void OnSignInResult(FirebaseAuthUIAuthenticationResult result){
         IdpResponse response = result.getIdpResponse();
         if(result.getResultCode()== RESULT_OK){
@@ -135,15 +110,36 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private  void signOut(){
+    //Firebase SignOut
+    private void signOut(){
         AuthUI.getInstance()
                 .signOut(this)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        createSignInIntent();
-
-                    }
+                    public void onComplete(@NonNull Task<Void> task) { createSignInIntent(); }
                 });
     }
 }
+
+        //Old methods to view solar, and car charging? Can remove if not used anymore.
+        /*@SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button solar = (Button) findViewById(R.id.solar_btn);
+        solar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               Intent s = new Intent(MainActivity.this,);
+               startActivity(s);
+            }
+        });*/
+
+        /*@SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button elecCar = (Button) findViewById(R.id.car_btn);
+        elecCar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent e = new Intent(MainActivity.this,);
+                startActivity(e);
+            }
+        });*/
+
+        //UNCOMMENT THIS WHEN READY, Firebase database setup I think
+        /*FirebaseDatabase database = FirebaseDatabase.getInstance("");
+        DatabaseReference myRef = database.getReference("");
+        myRef.setValue("");*/
