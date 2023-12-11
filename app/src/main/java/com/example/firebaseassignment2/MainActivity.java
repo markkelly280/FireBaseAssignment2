@@ -32,7 +32,9 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private FirebaseAuth myAuth;
-    Button SignOut;
+    Button signOut;
+    Button exit;
+    Button login;
 
     @Override
     protected void onStart(){
@@ -50,16 +52,17 @@ public class MainActivity extends AppCompatActivity {
             }
     );
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         myAuth = FirebaseAuth.getInstance();
-        createSignInIntent();
+        //createSignInIntent();
 
-        SignOut = (Button) findViewById(R.id.signout_btn);
-        SignOut.setOnClickListener(new View.OnClickListener() {
+        signOut = (Button) findViewById(R.id.signout_btn);
+        signOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 signOut();
@@ -85,6 +88,24 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(cP);
             }
         });
+
+        //Function to close the app when exit button is tapped
+        exit = (Button) findViewById(R.id.exit_btn);
+        exit.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                finish();
+            }
+        });
+
+        login = (Button) findViewById(R.id.btnLogin);
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                createSignInIntent();
+            }
+        });
     }
 
     public void createSignInIntent(){
@@ -99,12 +120,15 @@ public class MainActivity extends AppCompatActivity {
                 .build();
         signInLauncher.launch(signInIntent);
     }
-    //Firebase SignIn Result
+
     private void OnSignInResult(FirebaseAuthUIAuthenticationResult result){
         IdpResponse response = result.getIdpResponse();
         if(result.getResultCode()== RESULT_OK){
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
             Toast.makeText(this, user.getEmail(), Toast.LENGTH_SHORT).show();
+            //Disables login button and enables signout button when login was successful
+            login.setEnabled(false);
+            signOut.setEnabled(true);
         }else {
             Toast.makeText(this, "login Failed",Toast.LENGTH_SHORT).show();
         }
@@ -112,10 +136,14 @@ public class MainActivity extends AppCompatActivity {
 
     //Firebase SignOut
     private void signOut(){
-        AuthUI.getInstance()
-                .signOut(this)
+        AuthUI.getInstance().signOut(this)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    public void onComplete(@NonNull Task<Void> task) { createSignInIntent(); }
+                    public void onComplete(@NonNull Task<Void> task) {
+                        //Enables the login button and disables the signout button when signout is successful
+                        login.setEnabled(true);
+                        signOut.setEnabled(false);
+                        Toast.makeText(MainActivity.this, "Signed out Successfully", Toast.LENGTH_SHORT).show();
+                    }
                 });
     }
 }
