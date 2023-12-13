@@ -15,13 +15,16 @@
         android:theme="@style/Theme.FireBaseAssignment2"
         tools:targetApi="31">
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".charge"
             android:exported="false" />
         <activity
             android:name=".wind"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Splashscreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
