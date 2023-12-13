@@ -3,11 +3,14 @@ package com.example.firebaseassignment2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -38,6 +41,15 @@ public class solar_panel_info extends AppCompatActivity implements SensorEventLi
                 sensorManager.registerListener(this, lightSensor, SensorManager.SENSOR_DELAY_NORMAL);
             }
     }
+        Button home = (Button) findViewById(R.id.homeS_btn);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent h = new Intent(solar_panel_info.this, MainActivity.class);
+                startActivity(h);
+            }
+        });
+
 }
     @Override
     protected void onDestroy() {
@@ -68,4 +80,5 @@ public class solar_panel_info extends AppCompatActivity implements SensorEventLi
 
     }
 }
+
 

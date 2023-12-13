@@ -10,8 +10,14 @@
         android:id="@+id/myImageView"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:src="@drawable/solar_panel_farm"
-    android:scaleType="centerCrop" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/solar_panel_farm" />
 
     <TextView
         android:id="@+id/myTextView"
@@ -20,6 +26,24 @@
         android:layout_below="@id/myImageView"
         android:padding="16dp"
         android:text="Solar panels play a pivotal role in advancing renewable energy by harnessing the abundant and clean power of the sun. As photovoltaic cells within solar panels convert sunlight into electricity, they offer a sustainable and environmentally friendly alternative to traditional fossil fuels. Solar power systems produce electricity with minimal environmental impact, emitting no greenhouse gases or air pollutants during operation. The scalability of solar technology allows for installations ranging from small residential arrays to large utility-scale solar farms, contributing to a decentralized and diversified energy landscape. Additionally, advancements in solar technology, coupled with decreasing costs, have made solar energy increasingly accessible and economically viable. By tapping into an essentially infinite and renewable resource, solar panels are a key driver in the global transition toward a more sustainable and low-carbon energy future, offering both environmental and economic benefits."
-        android:textSize="18sp" />
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/homeS_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="21dp"
+        android:text="Home" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="169dp"
+        android:layout_height="108dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="9dp"
+        app:srcCompat="@drawable/img_20231208_150712" />
 
 </RelativeLayout>

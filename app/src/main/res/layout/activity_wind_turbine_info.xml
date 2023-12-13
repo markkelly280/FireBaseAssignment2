@@ -10,16 +10,45 @@
         android:id="@+id/myImageView"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:src="@drawable/wind_mill"
-    android:scaleType="centerCrop" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="-10dp"
+        android:layout_marginTop="138dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wind_mill" />
 
     <TextView
         android:id="@+id/myTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/myImageView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
         android:padding="16dp"
         android:text="Wind turbines play a pivotal role in advancing renewable energy by harnessing the power of the wind to generate electricity. As a clean and sustainable energy source, wind power significantly reduces reliance on fossil fuels, contributing to a lower carbon footprint and mitigating the impacts of climate change. Wind turbines operate without emitting greenhouse gases during electricity generation, offering an environmentally friendly alternative to traditional energy sources. The scalability of wind farms, coupled with continuous and predictable wind resources, ensures a reliable and constant power supply. Beyond environmental benefits, wind energy projects stimulate economic growth, create job opportunities, and enhance energy independence. As technological advancements continue to improve efficiency and reduce costs, wind turbines stand as a key component in the global transition towards a more sustainable and resilient energy infrastructure"
-        android:textSize="18sp" />
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="124dp"
+        android:layout_height="131dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/img_20231208_150712" />
+
+    <Button
+        android:id="@+id/homeW_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="153dp"
+        android:layout_marginBottom="24dp"
+        android:text="Home" />
 
 </RelativeLayout>
