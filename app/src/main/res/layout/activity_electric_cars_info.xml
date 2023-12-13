@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".electric_cars_info">
+
+    <ImageView
+        android:id="@+id/myImageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/car_image"
+    android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/myTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/myImageView"
+        android:padding="16dp"
+        android:text="Electric cars are integral to promoting the utilization of renewable energy in the transportation sector. By relying on electricity as a power source, electric vehicles (EVs) contribute to a reduction in greenhouse gas emissions compared to traditional internal combustion engine vehicles. When charged using electricity generated from renewable sources such as solar, wind, or hydroelectric power, electric cars significantly lower their overall carbon footprint. This synergy between electric vehicles and renewable energy aligns with efforts to combat climate change and transition toward a more sustainable energy future. As the grid becomes increasingly powered by clean energy, the environmental benefits of electric cars continue to grow, making them a key component in fostering a more sustainable and low-carbon transportation ecosystem."
+        android:textSize="18sp" />
+
+</RelativeLayout>
