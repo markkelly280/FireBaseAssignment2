@@ -100,6 +100,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button electricCars = (Button) findViewById(R.id.car_btn);
+
+        electricCars.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent i = new Intent(MainActivity.this, electric_cars_info.class);
+                startActivity(i);
+            }
+        });
+
         //Function to close the app when exit button is tapped
         exit = (Button) findViewById(R.id.exit_btn);
         exit.setOnClickListener(new View.OnClickListener(){
