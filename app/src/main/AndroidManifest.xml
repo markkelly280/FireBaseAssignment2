@@ -8,6 +8,10 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-feature android:name="android.hardware.sensor.light" android:required="true" />
+
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -38,6 +42,17 @@
             android:name=".chargep"
             android:exported="false"
             android:label="@string/title_activity_chargep" />
+        <activity
+            android:name=".solar_panel_info"
+            android:exported="false" />
+
+        <activity
+            android:name=".wind_turbine_info"
+            android:exported="false" />
+        <activity
+            android:name=".electric_cars_info"
+            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="false" />
