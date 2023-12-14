@@ -69,12 +69,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button solarPower = (Button) findViewById(R.id.solar_btn);
+
+        solarPower.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view){
+                Intent i = new Intent(MainActivity.this, solar_panel_info.class);
+                startActivity(i);
+            }
+        });
+
         //Code to open the wind activity
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button windfarms = (Button) findViewById(R.id.wind_btn);
         windfarms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent w = new Intent(MainActivity.this, wind.class);
+                Intent w = new Intent(MainActivity.this, wind_turbine_info.class);
                 startActivity(w);
             }
         });

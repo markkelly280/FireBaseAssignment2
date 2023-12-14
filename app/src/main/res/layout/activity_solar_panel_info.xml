@@ -26,7 +26,7 @@
         android:layout_below="@id/myImageView"
         android:padding="16dp"
         android:text="Solar panels play a pivotal role in advancing renewable energy by harnessing the abundant and clean power of the sun. As photovoltaic cells within solar panels convert sunlight into electricity, they offer a sustainable and environmentally friendly alternative to traditional fossil fuels. Solar power systems produce electricity with minimal environmental impact, emitting no greenhouse gases or air pollutants during operation. The scalability of solar technology allows for installations ranging from small residential arrays to large utility-scale solar farms, contributing to a decentralized and diversified energy landscape. Additionally, advancements in solar technology, coupled with decreasing costs, have made solar energy increasingly accessible and economically viable. By tapping into an essentially infinite and renewable resource, solar panels are a key driver in the global transition toward a more sustainable and low-carbon energy future, offering both environmental and economic benefits."
-        android:textSize="14sp" />
+        android:textSize="12sp" />
 
     <Button
         android:id="@+id/homeS_btn"

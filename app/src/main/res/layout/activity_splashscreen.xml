@@ -8,9 +8,13 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="276dp"
+        android:layout_width="0dp"
         android:layout_height="281dp"
-        app:srcCompat="@drawable/img_20231208_150712"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="225dp" />
+        android:layout_marginStart="67dp"
+        android:layout_marginEnd="67dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_20231208_150712" />
 </androidx.constraintlayout.widget.ConstraintLayout>
