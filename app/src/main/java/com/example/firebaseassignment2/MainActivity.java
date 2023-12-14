@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         chargePoint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent cP = new Intent(MainActivity.this, charge.class);
+                Intent cP = new Intent(MainActivity.this, chargep.class);
                 startActivity(cP);
             }
         });
